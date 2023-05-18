@@ -1,0 +1,11 @@
+#
+# Vivado
+!.gitignore
+*.cache/
+*.gen/
+*.sim/
+*.ip_user_files
+*.hw
+*.runs/
+
+
