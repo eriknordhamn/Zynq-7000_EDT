@@ -11,3 +11,280 @@
 19:43:03 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
 19:44:36 INFO  : Result from executing command 'getProjects': zynq_edt
 19:44:36 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm;zynq_edt|/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/zynq_edt.xpfm
+21:40:10 DEBUG : Logs will be stored at '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/IDE.log'.
+21:40:11 INFO  : Launching XSCT server: xsct -n  -interactive /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/temp_xsdb_launch_script.tcl
+21:40:14 INFO  : Platform repository initialization has completed.
+21:40:14 INFO  : Registering command handlers for Vitis TCF services
+21:40:15 INFO  : XSCT server has started successfully.
+21:40:17 INFO  : Successfully done setting XSCT server connection channel  
+21:40:17 INFO  : plnx-install-location is set to ''
+21:40:17 INFO  : Successfully done setting workspace for the tool. 
+21:40:17 INFO  : Successfully done query RDI_DATADIR 
+21:42:34 INFO  : Checking for BSP changes to sync application flags for project 'hello_world'...
+21:44:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:44:26 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6564A' is selected.
+21:44:26 INFO  : 'jtag frequency' command is executed.
+21:44:27 INFO  : Context for 'APU' is selected.
+21:44:27 INFO  : System reset is completed.
+21:44:30 INFO  : 'after 3000' command is executed.
+21:44:30 INFO  : Context for 'APU' is selected.
+21:44:31 INFO  : Hardware design and registers information is loaded from '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa'.
+21:44:31 INFO  : 'configparams force-mem-access 1' command is executed.
+21:44:31 INFO  : Context for 'APU' is selected.
+21:44:31 INFO  : Sourcing of '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/_ide/psinit/ps7_init.tcl' is done.
+21:44:59 INFO  : 'ps7_init' command is executed.
+21:45:00 INFO  : 'ps7_post_config' command is executed.
+21:45:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:45:03 INFO  : The application '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/Debug/hello_world.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:45:05 INFO  : 'configparams force-mem-access 0' command is executed.
+21:45:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/Debug/hello_world.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:45:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:45:06 INFO  : 'con' command is executed.
+21:45:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:45:06 INFO  : Launch script is exported to file '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world_system/_ide/scripts/debugger_hello_world-default.tcl'
+21:46:48 INFO  : Disconnected from the channel tcfchan#1.
+21:46:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:46:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6564A' is selected.
+21:46:50 INFO  : 'jtag frequency' command is executed.
+21:46:50 INFO  : Context for 'APU' is selected.
+21:46:50 INFO  : System reset is completed.
+21:46:53 INFO  : 'after 3000' command is executed.
+21:46:53 INFO  : Context for 'APU' is selected.
+21:46:55 INFO  : Hardware design and registers information is loaded from '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa'.
+21:46:55 INFO  : 'configparams force-mem-access 1' command is executed.
+21:46:55 INFO  : Context for 'APU' is selected.
+21:46:55 INFO  : Sourcing of '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/_ide/psinit/ps7_init.tcl' is done.
+21:47:23 INFO  : 'ps7_init' command is executed.
+21:47:24 INFO  : 'ps7_post_config' command is executed.
+21:47:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:47:27 INFO  : The application '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/Debug/hello_world.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:47:29 INFO  : 'configparams force-mem-access 0' command is executed.
+21:47:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/Debug/hello_world.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:47:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:47:29 INFO  : 'con' command is executed.
+21:47:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:47:29 INFO  : Launch script is exported to file '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world_system/_ide/scripts/debugger_hello_world-default_1.tcl'
+21:48:18 INFO  : Disconnected from the channel tcfchan#2.
+21:48:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:48:20 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6564A' is selected.
+21:48:20 INFO  : 'jtag frequency' command is executed.
+21:48:20 INFO  : Context for 'APU' is selected.
+21:48:20 INFO  : System reset is completed.
+21:48:23 INFO  : 'after 3000' command is executed.
+21:48:24 INFO  : Context for 'APU' is selected.
+21:48:26 INFO  : Hardware design and registers information is loaded from '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa'.
+21:48:26 INFO  : 'configparams force-mem-access 1' command is executed.
+21:48:26 INFO  : Context for 'APU' is selected.
+21:48:26 INFO  : Sourcing of '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/_ide/psinit/ps7_init.tcl' is done.
+21:48:54 INFO  : 'ps7_init' command is executed.
+21:48:55 INFO  : 'ps7_post_config' command is executed.
+21:48:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:48:58 INFO  : The application '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/Debug/hello_world.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:49:00 INFO  : 'configparams force-mem-access 0' command is executed.
+21:49:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/Debug/hello_world.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:49:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:49:00 INFO  : 'con' command is executed.
+21:49:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:49:00 INFO  : Launch script is exported to file '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world_system/_ide/scripts/debugger_hello_world-default_1.tcl'
+21:50:51 DEBUG : Logs will be stored at '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/IDE.log'.
+21:50:52 INFO  : Launching XSCT server: xsct -n  -interactive /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/temp_xsdb_launch_script.tcl
+21:50:55 INFO  : XSCT server has started successfully.
+21:50:55 INFO  : Successfully done setting XSCT server connection channel  
+21:50:55 INFO  : plnx-install-location is set to ''
+21:50:55 INFO  : Successfully done setting workspace for the tool. 
+21:50:55 INFO  : Successfully done query RDI_DATADIR 
+21:50:55 INFO  : Registering command handlers for Vitis TCF services
+21:50:56 INFO  : Platform repository initialization has completed.
+21:51:01 INFO  : Checking for BSP changes to sync application flags for project 'hello_world'...
+21:51:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:51:24 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6564A' is selected.
+21:51:24 INFO  : 'jtag frequency' command is executed.
+21:51:24 INFO  : Context for 'APU' is selected.
+21:51:24 INFO  : System reset is completed.
+21:51:27 INFO  : 'after 3000' command is executed.
+21:51:28 INFO  : Context for 'APU' is selected.
+21:51:28 INFO  : Hardware design and registers information is loaded from '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa'.
+21:51:28 INFO  : 'configparams force-mem-access 1' command is executed.
+21:51:28 INFO  : Context for 'APU' is selected.
+21:51:28 INFO  : Sourcing of '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/_ide/psinit/ps7_init.tcl' is done.
+21:51:51 INFO  : 'ps7_init' command is executed.
+21:51:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:51:52 INFO  : 'ps7_post_config' command is executed.
+21:51:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:51:55 INFO  : The application '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/Debug/hello_world.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:51:57 INFO  : 'configparams force-mem-access 0' command is executed.
+21:51:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/Debug/hello_world.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:51:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:51:57 INFO  : 'con' command is executed.
+21:51:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:51:57 INFO  : Launch script is exported to file '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world_system/_ide/scripts/debugger_hello_world-default_1.tcl'
+21:51:57 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6564A' is selected.
+21:51:58 INFO  : 'jtag frequency' command is executed.
+21:51:58 INFO  : Context for 'APU' is selected.
+21:51:58 INFO  : System reset is completed.
+21:52:01 INFO  : 'after 3000' command is executed.
+21:52:01 INFO  : Context for 'APU' is selected.
+21:52:01 ERROR : can't read "map": no such variable
+21:52:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+----------------End of Script----------------
+
+21:52:01 ERROR : can't read "map": no such variable
+21:52:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:52:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6564A' is selected.
+21:52:19 INFO  : 'jtag frequency' command is executed.
+21:52:19 INFO  : Context for 'APU' is selected.
+21:52:19 INFO  : System reset is completed.
+21:52:22 INFO  : 'after 3000' command is executed.
+21:52:22 INFO  : Context for 'APU' is selected.
+21:52:22 ERROR : can't read "map": no such variable
+21:52:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+----------------End of Script----------------
+
+21:52:22 ERROR : can't read "map": no such variable
+21:52:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:52:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6564A' is selected.
+21:52:58 INFO  : 'jtag frequency' command is executed.
+21:52:58 INFO  : Context for 'APU' is selected.
+21:52:58 INFO  : System reset is completed.
+21:53:01 INFO  : 'after 3000' command is executed.
+21:53:02 INFO  : Context for 'APU' is selected.
+21:53:02 ERROR : can't read "map": no such variable
+21:53:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+----------------End of Script----------------
+
+21:53:02 ERROR : can't read "map": no such variable
+21:53:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:53:25 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6564A' is selected.
+21:53:25 INFO  : 'jtag frequency' command is executed.
+21:53:25 INFO  : Context for 'APU' is selected.
+21:53:25 INFO  : System reset is completed.
+21:53:28 INFO  : 'after 3000' command is executed.
+21:53:28 INFO  : Context for 'APU' is selected.
+21:53:28 ERROR : can't read "map": no such variable
+21:53:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+----------------End of Script----------------
+
+21:53:28 ERROR : can't read "map": no such variable
+21:53:52 INFO  : Checking for BSP changes to sync application flags for project 'hello_world'...
+21:54:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:54:04 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6564A' is selected.
+21:54:04 INFO  : 'jtag frequency' command is executed.
+21:54:04 INFO  : Context for 'APU' is selected.
+21:54:05 INFO  : System reset is completed.
+21:54:08 INFO  : 'after 3000' command is executed.
+21:54:08 INFO  : Context for 'APU' is selected.
+21:54:08 ERROR : can't read "map": no such variable
+21:54:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+----------------End of Script----------------
+
+21:54:08 ERROR : can't read "map": no such variable
