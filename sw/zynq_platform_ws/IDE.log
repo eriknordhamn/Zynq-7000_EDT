@@ -1,0 +1,13 @@
+19:41:15 DEBUG : Logs will be stored at '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/IDE.log'.
+19:41:17 INFO  : Launching XSCT server: xsct -n  -interactive /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/temp_xsdb_launch_script.tcl
+19:41:17 INFO  : Platform repository initialization has completed.
+19:41:18 INFO  : Registering command handlers for Vitis TCF services
+19:41:20 INFO  : XSCT server has started successfully.
+19:41:22 INFO  : plnx-install-location is set to ''
+19:41:22 INFO  : Successfully done setting XSCT server connection channel  
+19:41:22 INFO  : Successfully done query RDI_DATADIR 
+19:41:22 INFO  : Successfully done setting workspace for the tool. 
+19:43:03 INFO  : Result from executing command 'getProjects': zynq_edt
+19:43:03 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+19:44:36 INFO  : Result from executing command 'getProjects': zynq_edt
+19:44:36 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm;zynq_edt|/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/zynq_edt.xpfm
