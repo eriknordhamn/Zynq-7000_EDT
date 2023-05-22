@@ -1,4 +1,4 @@
-21:53:52 **** Incremental Build of configuration Debug for project hello_world ****
+21:36:05 **** Incremental Build of configuration Debug for project hello_world ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -7,12 +7,14 @@ make --no-print-directory main-build
 Building file: ../src/helloworld.c
 Invoking: ARM v7 gcc compiler
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:19: warning: unused variable 'k' [-Wunused-variable]
+   55 |         int i, j, k;
+      |                   ^
+../src/helloworld.c:55:16: warning: unused variable 'j' [-Wunused-variable]
+   55 |         int i, j, k;
+      |                ^
 Finished building: ../src/helloworld.c
- 
-Building file: ../src/platform.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-Finished building: ../src/platform.c
  
 Building target: hello_world.elf
 Invoking: ARM v7 gcc linker
@@ -22,9 +24,9 @@ Finished building target: hello_world.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size hello_world.elf  |tee "hello_world.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19112	   1144	  22568	  42824	   a748	hello_world.elf
+  49939	   2548	  22632	  75119	  1256f	hello_world.elf
 Finished building: hello_world.elf.size
  
 
-21:53:53 Build Finished (took 1s.434ms)
+21:36:07 Build Finished (took 1s.766ms)
 

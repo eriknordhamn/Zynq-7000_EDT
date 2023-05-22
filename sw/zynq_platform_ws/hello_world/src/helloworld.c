@@ -52,10 +52,15 @@
 
 int main()
 {
+	int i, j, k;
     init_platform();
 
-    print("Hello World\n\r");
-    print("Successfully ran Hello World application. Success!");
+    print("Hello World\n");
+    for (i=0;i<10;i++){
+    	printf("Loop: %d\n", i);
+    }
+    print("Successfully ran Hello World application. Success!\n");
+
     cleanup_platform();
     return 0;
 }
