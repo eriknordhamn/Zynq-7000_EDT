@@ -23,5 +23,4 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/hello_world/Debug/hello_world.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A9*#0"}
-con
+bpadd -addr &main

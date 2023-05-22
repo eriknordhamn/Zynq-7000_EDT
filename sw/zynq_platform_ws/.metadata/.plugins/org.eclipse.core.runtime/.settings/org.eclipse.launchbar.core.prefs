@@ -5,6 +5,6 @@ configDescList=org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_hello_world-Default/activeLaunchMode=embrun
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_hello_world-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
-org.eclipse.launchbar.core.descriptorType.default\:Debugger_hello_world-Default_1/activeLaunchMode=embrun
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_hello_world-Default_1/activeLaunchMode=embdebug
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_hello_world-Default_1/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_hello_world_system/activeLaunchMode=run
