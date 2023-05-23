@@ -1,31 +1,30 @@
 Nothing to build in platform 'zynq_edt'
 
-21:36:05 **** Incremental Build of configuration Debug for project hello_world ****
+20:49:34 **** Incremental Build of configuration Debug for project hello_linux ****
 make all 
-make --no-print-directory pre-build
-a9-linaro-pre-build-step
- 
-make --no-print-directory main-build
 Building file: ../src/helloworld.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:55:19: warning: unused variable 'k' [-Wunused-variable]
-   55 |         int i, j, k;
-      |                   ^
-../src/helloworld.c:55:16: warning: unused variable 'j' [-Wunused-variable]
-   55 |         int i, j, k;
-      |                ^
+../src/helloworld.c:25:24: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+   25 |                 printf(i);
+      |                        ^
+      |                        |
+      |                        int
+In file included from ../src/helloworld.c:19:
+/opt/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/cortexa9t2hf-neon-xilinx-linux-gnueabi/usr/include/stdio.h:350:43: note: expected 'const char * restrict' but argument is of type 'int'
+  350 | extern int printf (const char *__restrict __format, ...);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
 Finished building: ../src/helloworld.c
  
-Building target: hello_world.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/standalone_domain/bsplib/lib -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: hello_world.elf
+Building target: hello_linux.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "hello_linux.elf"  ./src/helloworld.o   
+Finished building target: hello_linux.elf
  
-Invoking: ARM v7 Print Size
-arm-none-eabi-size hello_world.elf  |tee "hello_world.elf.size"
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size hello_linux.elf  |tee "hello_linux.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  49939	   2548	  22632	  75119	  1256f	hello_world.elf
-Finished building: hello_world.elf.size
+   1403	    312	      4	   1719	    6b7	hello_linux.elf
+Finished building: hello_linux.elf.size
  

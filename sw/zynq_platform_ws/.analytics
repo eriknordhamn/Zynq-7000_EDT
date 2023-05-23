@@ -26,3 +26,10 @@ timestamp=[2023-05-22 22:13:17], mode=WORKBENCH_UI_INIT, duration=0:00:02.078, d
 timestamp=[2023-05-22 23:26:00], mode=WORKBENCH_START, duration=0:00:08.891, duration_ms=8891, data={}
 timestamp=[2023-05-22 23:26:01], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.361, duration_ms=361, data={}
 timestamp=[2023-05-22 23:26:02], mode=WORKBENCH_UI_INIT, duration=0:00:01.454, duration_ms=1454, data={editors_count=7, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,hello_world,hello_world_system,zynq_edt}
+timestamp=[2023-05-23 20:25:27], mode=WORKBENCH_START, duration=0:00:12.399, duration_ms=12399, data={}
+timestamp=[2023-05-23 20:25:29], mode=WORKBENCH_UI_INIT, duration=0:00:01.636, duration_ms=1636, data={editors_count=7, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,hello_world,hello_world_system,zynq_edt}
+timestamp=[2023-05-23 20:25:29], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.000, duration_ms=1000, data={}
+timestamp=[2023-05-23 20:27:45], mode=PLATFORM_GENERATION, duration=0:00:07.267, duration_ms=7267, data={name=zynq_edt}
+timestamp=[2023-05-23 20:29:40], mode=APP_CREATION, duration=0:00:02.860, duration_ms=2860, data={name=hello_linux, project_type=sdk, os=linux, processor=cortex-a9, runtime=C/C++, platform=zynq_edt, application_type=application}
+timestamp=[2023-05-23 20:29:54], mode=BUILD, duration=0:00:01.379, duration_ms=1379, data={name=hello_linux, configuration=Debug, clean_build=false}
+timestamp=[2023-05-23 20:49:35], mode=BUILD, duration=0:00:01.012, duration_ms=1012, data={name=hello_linux, configuration=Debug, clean_build=false}

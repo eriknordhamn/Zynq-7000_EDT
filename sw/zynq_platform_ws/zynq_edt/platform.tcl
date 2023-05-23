@@ -16,3 +16,10 @@ platform write
 platform generate -domains 
 platform active {zynq_edt}
 platform generate
+platform active {zynq_edt}
+domain create -name {linux_domain} -os {linux} -proc {ps7_cortexa9} -arch {32-bit} -display-name {linux_domain} -desc {} -runtime {cpp}
+platform write
+domain config -image {}
+domain -report -json
+platform write
+platform generate

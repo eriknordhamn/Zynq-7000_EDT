@@ -1,0 +1,31 @@
+20:49:34 **** Incremental Build of configuration Debug for project hello_linux ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:25:24: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+   25 |                 printf(i);
+      |                        ^
+      |                        |
+      |                        int
+In file included from ../src/helloworld.c:19:
+/opt/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/cortexa9t2hf-neon-xilinx-linux-gnueabi/usr/include/stdio.h:350:43: note: expected 'const char * restrict' but argument is of type 'int'
+  350 | extern int printf (const char *__restrict __format, ...);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_linux.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "hello_linux.elf"  ./src/helloworld.o   
+Finished building target: hello_linux.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size hello_linux.elf  |tee "hello_linux.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1403	    312	      4	   1719	    6b7	hello_linux.elf
+Finished building: hello_linux.elf.size
+ 
+
+20:49:35 Build Finished (took 1s.1ms)
+
