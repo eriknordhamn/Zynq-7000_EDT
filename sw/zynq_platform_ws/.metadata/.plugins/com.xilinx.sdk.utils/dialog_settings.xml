@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="scw_hwspec" value="/home/erik/Development/repo/Zynq-7000_EDT/hw/edt_zybo_z7_20"/>
+	<item key="soc_flash_files_selection" value="/home/erik/Development/repo/Zynq-7000_EDT/os/zybo-Z7-20-2022.2/images/linux"/>
 </section>

@@ -567,3 +567,12 @@ con
 20:25:31 INFO  : Successfully done query RDI_DATADIR 
 20:27:42 INFO  : Result from executing command 'getProjects': zynq_edt
 20:27:42 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/opt/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm;zynq_edt|/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/zynq_edt.xpfm
+22:22:02 DEBUG : Logs will be stored at '/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/IDE.log'.
+22:22:04 INFO  : Launching XSCT server: xsct -n  -interactive /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/temp_xsdb_launch_script.tcl
+22:22:08 INFO  : XSCT server has started successfully.
+22:22:08 INFO  : Successfully done setting XSCT server connection channel  
+22:22:08 INFO  : plnx-install-location is set to ''
+22:22:08 INFO  : Successfully done setting workspace for the tool. 
+22:22:09 INFO  : Platform repository initialization has completed.
+22:22:09 INFO  : Registering command handlers for Vitis TCF services
+22:22:10 INFO  : Successfully done query RDI_DATADIR 

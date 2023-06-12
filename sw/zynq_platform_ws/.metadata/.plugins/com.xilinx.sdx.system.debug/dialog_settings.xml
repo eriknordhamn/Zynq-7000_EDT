@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hello_linux_system-imgFile" value="/home/erik/Development/repo/Zynq-7000_EDT/os/zybo-Z7-20-2022.2/images/linux/BOOT.BIN"/>
+	<item key="hello_linux_system-offSet" value=""/>
+	<item key="hello_linux_system-initFile" value="/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/boot/fsbl.elf"/>
+	<item key="hello_linux_system-flashType" value="qspi-x4-single"/>
+	<item key="hello_linux_system-verifyFlash" value="false"/>
+	<item key="hello_linux_system-blankCheck" value="false"/>
+	<item key="hello_linux_system-device" value="Auto Detect"/>
+	<item key="hello_linux_system-target" value="Local"/>
+	<item key="programflash.hwplatform" value="hello_linux_system"/>
+</section>
