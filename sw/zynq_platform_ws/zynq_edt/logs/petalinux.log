@@ -2,3 +2,11 @@ TRACE::2023-05-23.20:27:41::SCWLinux::Copying the qemu file from  /home/erik/Dev
 TRACE::2023-05-23.20:27:41::SCWLinux::Copying the qemu file from  /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/resources/zynq_edt/linux_domain/qemu_args.txt To /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/linux_domain/qemu/
 TRACE::2023-05-23.20:27:41::SCWLinux:: Copying the user libraries. 
 TRACE::2023-05-23.20:27:41::SCWLinux::Skipping the Petalinux build as image is already given.
+TRACE::2023-06-12.22:36:45::SCWLinux::Copying the qemu file from  /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/resources/zynq_edt/linux_domain/qemu_args.txt To /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/qemu/
+TRACE::2023-06-12.22:36:45::SCWLinux::Copying the qemu file from  /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/resources/zynq_edt/linux_domain/qemu_args.txt To /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/linux_domain/qemu/
+TRACE::2023-06-12.22:36:45::SCWLinux:: Copying the user libraries. 
+TRACE::2023-06-12.22:36:45::SCWLinux::Skipping the Petalinux build as image is already given.
+TRACE::2023-06-13.20:59:34::SCWLinux::Copying the qemu file from  /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/resources/zynq_edt/linux_domain/qemu_args.txt To /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/qemu/
+TRACE::2023-06-13.20:59:34::SCWLinux::Copying the qemu file from  /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/resources/zynq_edt/linux_domain/qemu_args.txt To /home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/linux_domain/qemu/
+TRACE::2023-06-13.20:59:34::SCWLinux:: Copying the user libraries. 
+TRACE::2023-06-13.20:59:34::SCWLinux::Skipping the Petalinux build as image is already given.

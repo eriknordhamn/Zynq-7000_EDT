@@ -23,3 +23,11 @@ domain config -image {}
 domain -report -json
 platform write
 platform generate
+platform active {zynq_edt}
+platform config -updatehw {/home/erik/Development/repo/Zynq-7000_EDT/hw/edt_zybo_z7_20/system_wrapper.xsa}
+platform config -updatehw {/home/erik/Development/repo/Zynq-7000_EDT/hw/edt_zybo_z7_20/system_wrapper.xsa}
+platform generate
+domain active {zynq_fsbl}
+bsp reload
+platform active {zynq_edt}
+platform generate -domains 

@@ -11,5 +11,7 @@ Built the Hello World application on standalone
 Built petalinux and booted
 Running a Hello World application under LInux
 Updated HW platform with two GPIO connected buttons
+Finished the above (but not fully understood the concepts)
+
 
 

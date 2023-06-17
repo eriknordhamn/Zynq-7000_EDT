@@ -1,0 +1,25 @@
+22:05:32 **** Incremental Build of configuration Debug for project hello_pl ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/hello_pl.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hello_pl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/standalone_domain/bspinclude/include -MMD -MP -MF"src/hello_pl.d" -MT"src/hello_pl.o" -o "src/hello_pl.o" "../src/hello_pl.c"
+Finished building: ../src/hello_pl.c
+ 
+Building target: hello_pl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/erik/Development/repo/Zynq-7000_EDT/sw/zynq_platform_ws/zynq_edt/export/zynq_edt/sw/zynq_edt/standalone_domain/bsplib/lib -o "hello_pl.elf"  ./src/hello_pl.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_pl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size hello_pl.elf  |tee "hello_pl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64899	   3364	  22736	  90999	  16377	hello_pl.elf
+Finished building: hello_pl.elf.size
+ 
+
+22:05:33 Build Finished (took 1s.455ms)
+
