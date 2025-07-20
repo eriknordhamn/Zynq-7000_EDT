@@ -13,9 +13,8 @@
   # See the License for the specific language governing permissions and
   # limitations under the License.
 */
-/*
- * helloworld.c: simple test application
- */
+
+// 2023-06-18, Erik: Added comments for understanding
 
 #include <stdio.h>
 #include "platform.h"
@@ -28,14 +27,19 @@
 #include "xil_exception.h"
 #include "xscugic.h"
 
+//Guessing this defines the PS GPIO
 static XGpioPs psGpioInstancePtr;
 extern XGpioPs_Config XGpioPs_ConfigTable[XPAR_XGPIOPS_NUM_INSTANCES];
+
+//LED LD4 pin
 static int iPinNumber = 7; //LD4 on MIO7
-XScuGic InterruptController; /* Instance of the Interrupt Controller */
-static XScuGic_Config *GicConfig;/* The configuration parameters of the
-				    controller */
+
+//Instance of the Interrupt Controller
+XScuGic InterruptController;
+//The configuration parameters of the controller
+static XScuGic_Config *GicConfig;
+
 static int InterruptFlag;
-//void print(char *str);
 extern char inbyte(void);
 
 void Timer_InterruptHandler(void *data, u8 TmrCtrNumber) {
